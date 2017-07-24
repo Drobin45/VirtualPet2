@@ -18,6 +18,7 @@ namespace VirtualPet2._0
         private bool sickness;
         private int tiredness;
         private int hp;
+        private bool armor;
 
 
         //Constructors
@@ -31,7 +32,7 @@ namespace VirtualPet2._0
             this.name = name;
         }
 
-        public VirtualPet(string name, int hunger, int thirst, int waste, int boredom, bool sickness, int tiredness, int hp)
+        public VirtualPet(string name, int hunger, int thirst, int waste, int boredom, bool sickness, int tiredness, int hp, bool armor)
         {
             this.name = name;
             this.hunger = hunger;
@@ -41,10 +42,13 @@ namespace VirtualPet2._0
             this.boredom = boredom;
             this.tiredness = tiredness;
             this.hp = hp;
+            this.armor = armor;
 
         }
 
         //Methods
+
+            //Basic pre-Game stat effectors
 
         public void HungerIncrease()
         {
@@ -78,18 +82,7 @@ namespace VirtualPet2._0
             this.waste = 0;
         }
         //-------------------------------------------
-        public void Sickness()
-        {
-            this.sickness = true;
-            Console.WriteLine("Oh no, your pet has contracted a rare illness!");
-        }
-
-        public void Cured()
-        {
-            this.sickness = false;
-            Console.WriteLine("Your pet is cured!");
-        }
-        //-------------------------------------------
+        
         public void BoredomeIncrease()
         {
             this.boredom++;
@@ -150,7 +143,7 @@ namespace VirtualPet2._0
             Console.WriteLine("Your pet is whithering with sickness! it loses 10 hp!");
         }
 
-        //-------------------------------------------
+        //-------------------------------------------DEATHCHECK----------------------------------
         public void CheckForDeath()
         {
 
@@ -189,10 +182,45 @@ namespace VirtualPet2._0
                 this.hp = hp - 25;
             }
         }
+        //-------------------------------------------COMBAT MECHANICS-----------------------------------
 
+        //Receiving Damage
+        public void TakeMinorDamage()
+        {
+            if(armor == true)
+            {
+                hp--;
+            }
+            else
+            {
+                this.hp = hp - 5;
+            }
+        }
 
-        //-------------------------------------------
+        public void TakeModerateDamage()
+        {
+            if (armor == true)
+            {
+                this.hp = hp -10;
+            }
+            else
+            {
+                this.hp = hp - 20;
+            }
+        }
 
+        public void TakeSevereDamage()
+        {
+            if (armor == true)
+            {
+                this.hp = hp - 25;
+            }
+            else
+            {
+                this.hp = hp - 35;
+            }
+        }
+        //--------------------------------------------------
 
 
         public void MyPetStatus()
