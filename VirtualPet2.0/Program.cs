@@ -84,8 +84,26 @@ namespace VirtualPet2._0
 
                     case 6:
                         Console.WriteLine("You have disembarked from your master! What great freedom lies before your adventerous littel paws! With the future lying in wait, where will you let your little, fury destiny take you?");
-                        Console.WriteLine("1.Flee to the forest with your beastial brethren!\n 2. There is a town nearby, a full human hive! Truly, not all humans can be as bad as your prior master! \n 3. There is a wizard's tower to the South, you could take that human, and make the mighty fellow bow to your even mightier will!");
+                        Console.WriteLine(" 1.Flee to the forest with your beastial brethren!\n 2. There is a town nearby, a full human hive! Truly, not all humans can be as bad as your prior master! \n 3. There is a wizard's tower to the South, you could take that human, and make the mighty fellow bow to your even mightier will! /n");
+                        int classDecision = int.Parse(Console.ReadLine());
+                        switch (classDecision)
+                        {
+                            case 1:
+                                Console.WriteLine("While your awful human was uncaging you to let you 'play', you savagely bit his hamfisted paw! Your act of bravery won you a moment of freedom. You leap from his palm and kick wildly as you free fall to the floor.");
 
+                                break;
+                            case 2:
+                                Console.WriteLine();
+
+                                break;
+                            case 3:
+                                Console.WriteLine();
+
+                                break;
+                            default:
+
+                                break;
+                        }
 
                         break;
 
@@ -100,7 +118,23 @@ namespace VirtualPet2._0
                         break;
                 }
 
-            } while (selectedOption != 10);
+            } while (selectedOption != 7);
+
+            //switch (classDecision)
+            //{
+            //    case 1:
+
+            //        break;
+            //    case 2:
+
+            //        break;
+            //    case 3:
+
+            //        break;
+            //    default:
+
+            //        break;
+            //}
         }
     }
 }
