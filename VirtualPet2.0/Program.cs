@@ -14,6 +14,8 @@ namespace VirtualPet2._0
 
             int selectedOption;
 
+            // Entire Virtual Pet commandlist is within a do-while loop.
+
             do
             {
                 //Console.Clear();    
@@ -27,8 +29,8 @@ namespace VirtualPet2._0
                 Console.WriteLine("3. Take it to to use the bathroom");
                 Console.WriteLine("4. Search for medicine!");
                 Console.WriteLine("5. Play");
-                Console.WriteLine("6. Go on an Adventure!");
-                Console.WriteLine("7. Quit\n");
+                Console.WriteLine("6. Quit");
+                Console.WriteLine("7. Go on an Adventure!\n");
 
                 selectedOption = int.Parse(Console.ReadLine());
 
@@ -80,66 +82,19 @@ namespace VirtualPet2._0
                         myCat.WasteIncrease();
                         myCat.ContractSicknessRoll();
                         Console.WriteLine("You frolic in the meadow with your beloved animal companion: what joy!");
-                        break;
+                        break;                       
 
                     case 6:
-                        Console.WriteLine("To go on an adventure, you must betray your wretched human and escape somehow. How will you attempt your escape, mighty kitten?");
-                        Console.WriteLine("\n 1. I will maw his awful palm, and run while he panics! \n  \n 2. I will wait for him to sleep then slink out into the night. \n \n 3. I will bend his environment to my demand, and create a trap that will incapacitate him long enough for me to leave!");
-                        int escapePlan = int.Parse(Console.ReadLine());
-                        switch (escapePlan)
-                        {
-                            case 1:
-                                Console.WriteLine("While your awful human was uncaging you to let you 'play', you savagely bit his hamfisted paw!\n Your act of bravery won you a moment of freedom. You leap from his palm and kick wildly as you free fall to the floor.");
-                                Console.WriteLine("He rushes after you, but he is too clumbsy, or you are just too agile. You leap out of a nearby open window. \n Wind washes over your fir as you escape, you taste your freedom, though you were slightly hurt from your earlier fall.");
-                                Console.WriteLine("You have taken 10 damage");
-                                myCat.TakeMinorDamage();
 
-                                Console.WriteLine("The night is dark, and humid enough to drink. Where will you go with your new freedom?");
-                                int freedom = int.Parse(Console.ReadLine());
-                                switch (freedom)
-                                {
-
-                                }
-
-
-                                break;
-
-                            case 2:
-                                Console.WriteLine("The terrible human slumbers deeply, as you slip outside as quiet as, well, a kitten.");
-                                Console.WriteLine("The night is dark, and humid enough to drink. Where will you go with your new freedom?");
-                                
-                                //Can't use the same command as a prior switch, need to find a way to combine trailing paths together.... Maybe this adventure should be outside the primary do/while loop?
-
-                                break;
-                            case 3:
-                                Console.WriteLine("Your human has the fatal flaw of allowing his dishes to stack irresponsibly, precariously on his sink. \n He also doesn's dry the floor after a shower, leaving the floor slippery. An opportune environment for banboozlement. \n Which part of the environment will you use against your foolish captor?");
-                                Console.WriteLine(" 1. I will tip over the dishes, and while they are distracted make my escape! \n 2. I will rush him when he is most vulnerable; when he is slippery and without fir!");
-                                int dishesOrBathroom = int.Parse(Console.ReadLine());
-                                switch (dishesOrBathroom)
-                                {
-                                    case 1:
-
-                                        break;
-                                    case 2:
-
-                                        break;
-                                    default:
-                                        Console.WriteLine("Please enter an appropriate command, mighty kitten! ");
-                                        break;
-                                }
-                                break;
-
-                            default:
-                                Console.WriteLine("Please enter an appropriate command, mighty kitten! ");
-                                break;
-                        }
-
+                        Console.WriteLine("Thank you for playing.");
+                        Environment.Exit(0);
                         break;
 
                     case 7:
-
-                        Console.WriteLine("Thank you for playing.");
-                        break;
+                        {
+                            Console.Clear();
+                            break;
+                        }
 
                     default:
 
@@ -147,7 +102,63 @@ namespace VirtualPet2._0
                         break;
                 }
 
-            } while (selectedOption != 7);
+            } while (selectedOption != 7);            
+
+            //Adventure begin. Choose your own adventure style game, with hp, armor/items options.
+                       
+            Console.WriteLine("To go on an adventure, you must betray your wretched human and escape somehow. How will you attempt your escape, mighty kitten?");
+            Console.WriteLine("\n 1. I will maw his awful palm, and run while he panics! \n  \n 2. I will wait for him to sleep then slink out into the night. \n \n 3. I will bend his environment to my demand, and create a trap that will incapacitate him long enough for me to leave!");
+            int escapePlan = int.Parse(Console.ReadLine());
+            switch (escapePlan)
+            {
+                case 1:
+                    Console.WriteLine("While your awful human was uncaging you to let you 'play', you savagely bit his hamfisted paw!\n Your act of bravery won you a moment of freedom. You leap from his palm and kick wildly as you free fall to the floor.");
+                    Console.WriteLine("He rushes after you, but he is too clumbsy, or you are just too agile. You leap out of a nearby open window. \n Wind washes over your fir as you escape, you taste your freedom, though you were slightly hurt from your earlier fall.");
+                    Console.WriteLine("You have taken 10 damage");
+                    myCat.TakeMinorDamage();                 
+                    break;
+
+                case 2:
+                    Console.WriteLine("The terrible human slumbers deeply, as you slip outside as quiet as, well, a kitten.");
+                    Console.WriteLine("The night is dark, and humid enough to drink. Where will you go with your new freedom?");                    
+                    break;
+                case 3:
+
+                    Console.WriteLine("Your human has the fatal flaw of allowing his dishes to stack in an irresponsibly precarious position on his sink. \n He also doesn's dry the floor after a shower, leaving the floor slippery. An opportune environment for banboozlement. \n Which part of the environment will you use against your foolish captor?");
+                    Console.WriteLine(" 1. I will tip over the dishes, and while they are distracted make my escape! \n 2. I will rush him when he is most vulnerable; when he is slippery and without fir!");
+
+                    int dishesOrBathroom = int.Parse(Console.ReadLine());
+                    switch (dishesOrBathroom)
+                    {
+                        case 1:
+                            Console.WriteLine("Luckily, your soon-to-be former master has a dinner party.\n When the guests file in, and the chaos of a human gathering begins to swell, you dash to knock over the dishes! \n They crash and clatter onto the floor, a dozen sets of eyes are on the broken remnants of your escape\n as you plunge through a door recently left ajar by a guest. Freedom is yours!");
+
+                            break;
+                        case 2:
+                            Console.WriteLine("While getting ready for a dinner party, your soon-to-be former master unfirs himself and showers. \n When he opens the door, you know the time is right! You pounce across his feet, scratching them and makin him flail and fall in abject terror! \n In the chaos he steps on your tail savagely (you take minor damage). \n You flee through the home, and cast yourself out the nearest open window! Freedom is yours!");
+                            myCat.TakeMinorDamage();
+                            break;
+                        default:
+                            Console.WriteLine("Please enter an appropriate command, mighty kitten! ");
+                            break;
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Please enter an appropriate command, mighty kitten! ");
+                    break;
+            }
+
+            Console.WriteLine("The night is dark, and humid enough to drink. Where will you go with your new freedom?");
+            int freedom = int.Parse(Console.ReadLine());
+            switch (freedom)
+            {
+
+            }
+
+            Console.WriteLine("You have disembarked from your master! What great freedom lies before your adventerous littel paws! With the future lying in wait, where will you let your little, fury destiny take you?");
+            Console.WriteLine(" 1.Flee to the forest with your beastial brethren!\n 2. There is a town nearby, a full human hive! Truly, not all humans can be as bad as your prior master! \n 3. There is a wizard's tower to the South, you could take that human, and make the mighty fellow bow to your even mightier will! /n");
+
 
             //switch (classDecision)
             //{
@@ -165,8 +176,6 @@ namespace VirtualPet2._0
             //        break;
             //}
 
-           // Console.WriteLine("You have disembarked from your master! What great freedom lies before your adventerous littel paws! With the future lying in wait, where will you let your little, fury destiny take you?");
-           // Console.WriteLine(" 1.Flee to the forest with your beastial brethren!\n 2. There is a town nearby, a full human hive! Truly, not all humans can be as bad as your prior master! \n 3. There is a wizard's tower to the South, you could take that human, and make the mighty fellow bow to your even mightier will! /n");
         }
     }
 }
