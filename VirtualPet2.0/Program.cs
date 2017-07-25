@@ -28,7 +28,7 @@ namespace VirtualPet2._0
                 Console.WriteLine("4. Search for medicine!");
                 Console.WriteLine("5. Play");
                 Console.WriteLine("6. Go on an Adventure!");
-                Console.WriteLine("7. Quit");
+                Console.WriteLine("7. Quit\n");
 
                 selectedOption = int.Parse(Console.ReadLine());
 
@@ -90,18 +90,47 @@ namespace VirtualPet2._0
                         {
                             case 1:
                                 Console.WriteLine("While your awful human was uncaging you to let you 'play', you savagely bit his hamfisted paw!\n Your act of bravery won you a moment of freedom. You leap from his palm and kick wildly as you free fall to the floor.");
-                                Console.WriteLine("He");
+                                Console.WriteLine("He rushes after you, but he is too clumbsy, or you are just too agile. You leap out of a nearby open window. \n Wind washes over your fir as you escape, you taste your freedom, though you were slightly hurt from your earlier fall.");
+                                Console.WriteLine("You have taken 10 damage");
+                                myCat.TakeMinorDamage();
+
+                                Console.WriteLine("The night is dark, and humid enough to drink. Where will you go with your new freedom?");
+                                int freedom = int.Parse(Console.ReadLine());
+                                switch (freedom)
+                                {
+
+                                }
+
+
                                 break;
+
                             case 2:
-                                Console.WriteLine();
+                                Console.WriteLine("The terrible human slumbers deeply, as you slip outside as quiet as, well, a kitten.");
+                                Console.WriteLine("The night is dark, and humid enough to drink. Where will you go with your new freedom?");
+                                
+                                //Can't use the same command as a prior switch, need to find a way to combine trailing paths together.... Maybe this adventure should be outside the primary do/while loop?
 
                                 break;
                             case 3:
-                                Console.WriteLine();
+                                Console.WriteLine("Your human has the fatal flaw of allowing his dishes to stack irresponsibly, precariously on his sink. \n He also doesn's dry the floor after a shower, leaving the floor slippery. An opportune environment for banboozlement. \n Which part of the environment will you use against your foolish captor?");
+                                Console.WriteLine(" 1. I will tip over the dishes, and while they are distracted make my escape! \n 2. I will rush him when he is most vulnerable; when he is slippery and without fir!");
+                                int dishesOrBathroom = int.Parse(Console.ReadLine());
+                                switch (dishesOrBathroom)
+                                {
+                                    case 1:
 
+                                        break;
+                                    case 2:
+
+                                        break;
+                                    default:
+                                        Console.WriteLine("Please enter an appropriate command, mighty kitten! ");
+                                        break;
+                                }
                                 break;
-                            default:
 
+                            default:
+                                Console.WriteLine("Please enter an appropriate command, mighty kitten! ");
                                 break;
                         }
 
