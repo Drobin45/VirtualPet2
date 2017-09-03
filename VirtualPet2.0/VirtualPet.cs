@@ -228,8 +228,8 @@ namespace VirtualPet2._0
         {
             if (this.boredom == 10)
             {
-                Console.WriteLine("To go on an adventure, you must betray your wretched human and escape somehow. How will you attempt your escape, mighty kitten?");
-                Console.WriteLine("\n 1. I will maw his awful palm, and run while he panics! \n  \n 2. I will wait for him to sleep then slink out into the night. \n \n 3. I will bend his environment to my demand, and create a trap that will incapacitate him long enough for me to leave!");
+                Console.WriteLine("\n Mighty kitten, you have grown bored of captivity, and now must find an escape from your wretched \"owner\". How will you escape?");
+                Console.WriteLine("\n 1. I will maw his awful palm, and run while he panics! \n  \n 2. I will wait for him to sleep then slink out into the night. \n \n 3. I will bend his environment to my will, and create a trap that will incapacitate him long enough for me to leave!");
                 int escapePlan = int.Parse(Console.ReadLine());
                 switch (escapePlan)
                 {
@@ -270,16 +270,18 @@ namespace VirtualPet2._0
                         Console.WriteLine("Please enter an appropriate command, mighty kitten! ");
                         break;
                 }
+                Console.WriteLine("You are now free little terror! The night is dark, and humid enough to drink. \n You drink it in with your newfound sense of freedom. What glory awaits you in your new liberty heavy existence. \n Choose wisely, and enter the world a new, liberated cat!");
+                Environment.Exit(0);
 
-                Console.WriteLine("The night is dark, and humid enough to drink. Where will you go with your new freedom?");
-                int freedom = int.Parse(Console.ReadLine());
-                switch (freedom)
-                {
+                //Console.WriteLine("The night is dark, and humid enough to drink. Where will you go with your new freedom?");
+                //int freedom = int.Parse(Console.ReadLine());
+                //switch (freedom)
+                //{
 
-                }
+                //}
 
-                Console.WriteLine("You have disembarked from your master! What great freedom lies before your adventerous littel paws! With the future lying in wait, where will you let your little, fury destiny take you?");
-                Console.WriteLine(" 1.Flee to the forest with your beastial brethren!\n 2. There is a town nearby, a full human hive! Truly, not all humans can be as bad as your prior master! \n 3. There is a wizard's tower to the South, you could take that human, and make the mighty fellow bow to your even mightier will! /n");
+                //Console.WriteLine("You have disembarked from your master! What great freedom lies before your adventerous littel paws! With the future lying in wait, where will you let your little, fury destiny take you?");
+                //Console.WriteLine(" 1.Flee to the forest with your beastial brethren!\n 2. There is a town nearby, a full human hive! Truly, not all humans can be as bad as your prior master! \n 3. There is a wizard's tower to the South, you could take that human, and make the mighty fellow bow to your even mightier will! /n");
 
             }
 
